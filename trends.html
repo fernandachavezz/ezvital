@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EZVital Trends</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="light-bg">
+
+  <header class="ez-header">
+    <img src="images/ezvital.png" alt="EZVital logo" class="logo" />
+    <h1>EZVital</h1>
+  </header>
+
+  <main class="dashboard">
+    <h2 class="section-title">Trends</h2>
+
+    <div class="tab-buttons">
+      <button class="tab active">Day</button>
+      <button class="tab">Week</button>
+      <button class="tab">Month</button>
+    </div>
+
+    <div class="trend-card">
+      <h3>Heart Rate</h3>
+      <canvas id="heartChart"></canvas>
+    </div>
+
+    <div class="trend-card">
+      <h3>Glucose</h3>
+      <canvas id="glucoseChart"></canvas>
+    </div>
+
+    <div class="trend-card">
+      <h3>Insulin</h3>
+      <canvas id="insulinChart"></canvas>
+    </div>
+  </main>
+
+  <nav class="bottom-nav">
+    <a href="index.html">🏠</a>
+    <a href="trends.html" class="active">📊</a>
+    <a href="coach.html">💬</a>
+    <a href="profile.html">⚙️</a>
+  </nav>
+
+  <script src="script.js"></script>
+</body>
+</html>

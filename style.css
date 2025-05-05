@@ -1,0 +1,336 @@
+body {
+    font-family: 'Helvetica Neue', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .light-bg {
+    background-color: #dff2f0;
+    color: #222;
+  }
+  
+  .ez-header {
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    background-color: white;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .logo {
+    height: 80px;
+    margin-right: 10px;
+  }
+  
+  h1 {
+    font-size: 3rem;
+    margin: 0;
+  }
+  
+  .dashboard {
+    padding: 16px;
+  }
+  
+  .greeting {
+    font-size: 2rem;
+    margin: 0;
+  }
+  
+  .date {
+    color: #555;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .vitals-card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+  
+  .vital-box {
+    background-color: white;
+    border-radius: 12px;
+    padding: 12px;
+    text-align: center;
+    font-weight: 500;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  }
+  
+  .vital-number {
+    font-size: 1.3rem;
+    font-weight: bold;
+    display: block;
+    margin-top: 4px;
+  }
+  
+  .pill-button {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    background: white;
+    margin-bottom: 12px;
+    border-radius: 25px;
+    font-weight: 500;
+    text-decoration: none;
+    color: #222;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  }
+  
+  
+  .status-check {
+    margin-top: 20px;
+    background: white;
+    padding: 12px;
+    border-radius: 12px;
+    font-size: 0.9rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  }
+  
+  .good-status {
+    color: green;
+  }
+  
+  .status-note {
+    color: #666;
+    font-size: 0.8rem;
+    margin-top: 4px;
+  }
+  
+  .bottom-nav {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: #2CB6B6;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    font-size: 1.4rem;
+    border-top: 1px solid #ccc;
+  }
+  
+  .bottom-nav a {
+    color: #555;
+    text-decoration: none;
+  }
+  
+  .bottom-nav a.active {
+    color: #000;
+  }
+
+  .section-title {
+    margin-top: 0;
+    font-size: 1.4rem;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  .tab-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .tab {
+    padding: 8px 16px;
+    background: white;
+    border: none;
+    border-radius: 20px;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  
+  .tab.active {
+    background: #333;
+    color: white;
+  }
+  
+  .trend-card {
+    background: white;
+    padding: 16px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  }
+  
+  .chat-container {
+    padding: 16px;
+    padding-bottom: 100px; /* for space above nav/input */
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  
+  .chat-bubble {
+    max-width: 80%;
+    padding: 12px 14px;
+    border-radius: 16px;
+    line-height: 1.5;
+    font-size: 0.95rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    position: relative;
+  }
+  
+  .bot {
+    background-color: white;
+    align-self: flex-start;
+  }
+  
+  .user {
+    background-color: #2CB6B6;
+    align-self: flex-end;
+    border: 1px solid #2CB6B6;
+  }
+  
+  .bot-avatar {
+    height: 28px;
+    width: 28px;
+    position: absolute;
+    top: -14px;
+    left: -38px;
+    border-radius: 50%;
+  }
+  
+  /* Chat input bar */
+  .chat-input {
+    position: fixed;
+    bottom: 60px; /* above bottom nav */
+    left: 0;
+    right: 0;
+    padding: 12px 16px;
+    background-color: white;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    border-top: 1px solid #ddd;
+    box-sizing: border-box;
+    z-index: 100;
+  }
+  
+  .chat-input input {
+    flex: 1;
+    padding: 10px 14px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    font-size: 1rem;
+    width: 100%;
+  }
+  
+  .chat-input button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background: var(--accent-color, #2CB6B6);
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    flex-shrink: 0;
+  }
+  
+  
+  .chat-container {
+    max-height: calc(100vh - 160px); /* adjust if needed */
+    overflow-y: auto;
+  }
+  
+  .settings-card {
+    background: white;
+    padding: 16px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  }
+  
+  .settings-card h3 {
+    margin-top: 0;
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+  }
+  
+  .settings-card label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+    font-size: 0.95rem;
+  }
+  
+  .settings-card input[type="text"],
+  .settings-card input[type="email"] {
+    width: 60%;
+    padding: 6px 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 0.95rem;
+  }
+  
+  /* Toggle switch */
+  .toggle-setting {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .toggle-setting input[type="checkbox"] {
+    display: none;
+  }
+  
+  .toggle-setting .slider {
+    position: relative;
+    width: 40px;
+    height: 20px;
+    background-color: #ccc;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .toggle-setting .slider::before {
+    content: "";
+    position: absolute;
+    height: 16px;
+    width: 16px;
+    left: 2px;
+    top: 2px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+  }
+  
+  .toggle-setting input:checked + .slider {
+    background-color: #26a69a;
+  }
+  
+  .toggle-setting input:checked + .slider::before {
+    transform: translateX(20px);
+  }
+  
+  /* Danger Zone */
+  .danger-zone .logout-button,
+  .danger-zone .delete-button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 0.95rem;
+  }
+  
+  .logout-button {
+    background-color: #f64a8a;
+    color: white;
+    border: none;
+  }
+  
+  .delete-button {
+    background-color: #fff;
+    border: 2px solid #f64a8a;
+    color: #f64a8a;
+  }
+  

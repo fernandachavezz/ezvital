@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EZVital Health Coach</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="light-bg">
+
+  <header class="ez-header">
+    <img src="images/ezvital.png" alt="EZVital logo" class="logo" />
+    <h1>EZVital</h1>
+  </header>
+
+  <main id="chat" class="chat-container">
+    <div class="chat-bubble bot">
+      <img src="images/liv-icon.png" alt="Liv AI" class="bot-avatar" />
+      <p>Hey, I haven’t been feeling great lately. My energy has been low and my glucose readings are kinda all over the place.</p>
+    </div>
+    <div class="chat-bubble bot">
+      <img src="images/liv-icon.png" alt="Liv AI" class="bot-avatar" />
+      <p>Thanks for letting me know. I'm here to help. I noticed your average glucose levels have been fluctuating between 150–210 mg/dL this week. That could definitely impact your energy. Would you like to explore possible causes together?</p>
+    </div>
+    <div class="chat-bubble user">
+      <p>Yeah, that would be great. I haven’t really changed much though.</p>
+    </div>
+  </main>
+  
+
+  <form class="chat-input">
+    <input type="text" placeholder="Ask anything..." />
+    <button type="submit">➤</button>
+  </form>
+
+  <nav class="bottom-nav">
+    <a href="index.html">🏠</a>
+    <a href="trends.html">📊</a>
+    <a href="coach.html" class="active">💬</a>
+    <a href="profile.html">⚙️</a>
+  </nav>
+  <script src="script.js"></script>
+</body>
+</html>
